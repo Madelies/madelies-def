@@ -381,7 +381,7 @@ h6 {
 # Hero Section
 --------------------------------------------------------------*/
 h2 .lies {
-  text-decoration: underline;
+  text-decoration: #f1c645 underline;
   display: inline-block;
 }
 
