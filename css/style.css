@@ -38,6 +38,7 @@ h5,
 h6 {
   font-family: 'Montserrat', sans-serif;
   line-height: 40px;
+  -webkit-font-smoothing: antialiased;
 }
 
 /*--------------------------------------------------------------
@@ -380,7 +381,11 @@ h6 {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
-
+h2 .lies {
+  display: inline-block;
+  text-decoration-line: #f1c645 underline;
+  -webkit-text-decoration-line: underline;
+}
 
 #hero {
   width: 100%;
@@ -404,11 +409,11 @@ h6 {
   z-index: -1;
 } 
 
-
 @media only screen and (max-width: 750px) {
   #background-video-desktop { 
     display: none;
   }
+  
 }
 
 #hero:before {
@@ -439,11 +444,6 @@ h6 {
   margin-bottom: 35px;
   font-size: 24px;
   font-weight: 700;
-}
-
-#hero h2 .lies {
-  text-decoration: #f1c645 underline;
-  display: inline-block;
 }
 
 #hero .btn-get-started {
@@ -480,11 +480,14 @@ h6 {
 
 @media (max-width: 768px) {
   #hero h1 {
+    font-size: 40px;
+    line-height: 60px;
+    font-weight: normal;
     display: none;
   }
 
   #hero h2 {
-    font-size: 24px;
+    font-size: 30px;
     line-height: 40px;
     margin-top: 40px;
     font-weight: 500;
@@ -494,13 +497,6 @@ h6 {
     border: 1px solid #1BAc91;
     margin-top: 30px;
   }
-
-  #hero h2 .lies {
-  text-decoration: #f1c645 underline;
-  display: inline-block;
-  -webkit-text-decoration-line: underline;
-  font-weight: 500;
-}
 
 }
 
