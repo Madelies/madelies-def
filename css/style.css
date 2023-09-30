@@ -379,7 +379,7 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Hero Section
+#  Section
 --------------------------------------------------------------*/
 
 h2 .lies {
@@ -443,8 +443,6 @@ h2 .lies {
 #hero h2 {
   color: #1bac91;
   margin-bottom: 35px;
-  font-size: 24px;
-  font-weight: 700;
 }
 
 #hero .btn-get-started {
