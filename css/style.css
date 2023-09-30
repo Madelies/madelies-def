@@ -617,7 +617,8 @@ section {
 
 .about h3 {
   
-  font-size: 34px;
+  font-size: 36px;
+  font-weight: 300;
   color: #5a5858;
   padding-bottom: 20px;
 }
@@ -635,7 +636,7 @@ section {
 
 .about .icon-box h4 {
   font-size: 24px;
-  
+  font-weight: 400;
   margin-left: 60px;
   color:  #1bac91;
 }
@@ -685,7 +686,7 @@ section {
 
 .steps .content-item h4 {
   font-size: 28px;
-  font-weight: 500;
+  font-weight: 300;
   padding: 0;
   margin: 20px 0;
   color: #1bac91;
