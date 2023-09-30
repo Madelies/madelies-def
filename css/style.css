@@ -482,6 +482,7 @@ h6 {
     font-size: 60px;
     line-height: 60px;
     font-weight: normal;
+    display: none;
   }
 
   #hero h2 {
@@ -489,7 +490,6 @@ h6 {
     line-height: 40px;
     margin-top: 40px;
     font-weight: 500;
-    display: none;
   }
 
   #hero h2 .lies {
