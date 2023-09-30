@@ -381,11 +381,6 @@ h6 {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
-h2 .lies {
-  display: inline-block;
-  text-decoration-line: #f1c645 underline;
-  -webkit-text-decoration-line: underline;
-}
 
 #hero {
   width: 100%;
