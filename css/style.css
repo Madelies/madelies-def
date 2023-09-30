@@ -444,7 +444,6 @@ h6 {
 #hero h2 .lies {
   text-decoration: #f1c645 underline;
   display: inline-block;
-  -webkit-text-decoration-line: underline;
 }
 
 #hero .btn-get-started {
@@ -481,14 +480,11 @@ h6 {
 
 @media (max-width: 768px) {
   #hero h1 {
-    font-size: 40px;
-    line-height: 60px;
-    font-weight: normal;
     display: none;
   }
 
   #hero h2 {
-    font-size: 30px;
+    font-size: 24px;
     line-height: 40px;
     margin-top: 40px;
     font-weight: 500;
@@ -498,6 +494,13 @@ h6 {
     border: 1px solid #1BAc91;
     margin-top: 30px;
   }
+
+  #hero h2 .lies {
+  text-decoration: #f1c645 underline;
+  display: inline-block;
+  -webkit-text-decoration-line: underline;
+  font-weight: 500;
+}
 
 }
 
