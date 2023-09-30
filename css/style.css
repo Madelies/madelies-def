@@ -380,10 +380,7 @@ h6 {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
-h2 .lies {
-  text-decoration: #f1c645 underline;
-  display: inline-block;
-}
+
 
 #hero {
   width: 100%;
@@ -442,6 +439,12 @@ h2 .lies {
   margin-bottom: 35px;
   font-size: 24px;
   font-weight: 700;
+}
+
+#hero h2 .lies {
+  text-decoration: #f1c645 underline;
+  display: inline-block;
+  -webkit-text-decoration-line: underline;
 }
 
 #hero .btn-get-started {
