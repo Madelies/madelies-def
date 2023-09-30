@@ -388,7 +388,7 @@ h2 .lies {
 #hero {
   width: 100%;
   height: calc(100vh - 70px);
-  /*background: url("../video/hero-video-LR.mp4") center center;*/
+  background: url("../img/home-mobile-background.png") center center;
   background-size: cover;
   position: relative;
   margin-top: 70px;
@@ -406,27 +406,12 @@ h2 .lies {
   bottom: 0;
   z-index: -1;
 } 
-#background-video-mobile {
-  display: none;
-}
+
 
 @media only screen and (max-width: 750px) {
   #background-video-desktop { 
     display: none;
   }
-  #background-video-mobile {
-  display: block;
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: -1;
-  }
-  
 }
 
 #hero:before {
