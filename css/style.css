@@ -11,12 +11,13 @@
 --------------------------------------------------------------*/
 body {
   font-family: 'Montserrat', sans-serif;
-  color: #444444;
+  color: #5a5858;
+  font-weight: 200;
 }
 
 @media (max-width: 750px) {
   body {
-    color: black;
+    color: #5a5858;
   }
 }
 
@@ -39,6 +40,7 @@ h6 {
   font-family: 'Montserrat', sans-serif;
   line-height: 40px;
   -webkit-font-smoothing: antialiased;
+  color: #5a5858;
 }
 
 /*--------------------------------------------------------------
@@ -379,7 +381,7 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-#  Section
+# Hero Section
 --------------------------------------------------------------*/
 
 
@@ -435,7 +437,7 @@ h6 {
   font-family: 'Sacramento', cursive;
   margin: 0 0 0 0;
   font-size: 90px;
-  font-weight: 300;
+  font-weight: 100;
   line-height: 120px;
   color: #1bac91;
 }
@@ -443,13 +445,14 @@ h6 {
 #hero h2 {
   color: #1bac91;
   margin-bottom: 35px;
+  font-weight: 200;
 }
 
 #hero .btn-get-started {
   font-family: "dosis", sans-serif;
   text-transform: uppercase;
-  font-weight: 500;
-  font-size: 16px;
+  font-weight: 300;
+  font-size: 18px;
   letter-spacing: 1px;
   display: inline-block;
   padding: 8px 28px;
@@ -479,7 +482,7 @@ h6 {
 
 @media (max-width: 768px) {
   #hero h1 {
-    font-size: 60px;
+    font-size: 40px;
     line-height: 60px;
     font-weight: normal;
     display: none;
@@ -489,7 +492,7 @@ h6 {
     font-size: 30px;
     line-height: 40px;
     margin-top: 40px;
-    font-weight: 500;
+    font-weight: 300;
   }
 
   #hero h2 .lies {
@@ -502,6 +505,7 @@ h6 {
   }
 
 }
+
 
 /*--------------------------------------------------------------
 # Sections General
@@ -612,9 +616,9 @@ section {
 }
 
 .about h3 {
-  font-weight: 400;
+  
   font-size: 34px;
-  color: black;
+  color: #5a5858;
   padding-bottom: 20px;
 }
 
@@ -630,21 +634,25 @@ section {
 
 
 .about .icon-box h4 {
-  font-size: 22px;
-  font-weight: 500;
+  font-size: 24px;
+  
   margin-left: 60px;
-  color: black;
+  color:  #1bac91;
 }
 
 .about .icon-box p {
   font-size: 15px;
-  color: #848484;
+  color: #444444;
   margin-left: 60px;
+}
+
+.nadruk {
+  font-weight: 400;
 }
 
 @media (max-width: 768px) {
   .about .icon-box p {
-    color: black;
+    color: #5a5858;
   }
 }
 
@@ -677,14 +685,14 @@ section {
 
 .steps .content-item h4 {
   font-size: 28px;
-  font-weight: 400;
+  font-weight: 500;
   padding: 0;
   margin: 20px 0;
-  color: black;
+  color: #1bac91;
 }
 
 .steps .content-item p {
-  color: #777676aa;
+  color: #5a5858;
   font-size: 15px;
   margin: 0;
   padding: 0;
@@ -695,7 +703,7 @@ section {
     padding: 50px 10px;
   }
   .steps .content-item p {
-    color: black
+    color: #5a5858
   }
 }
 
@@ -837,7 +845,7 @@ section {
 
 .testimonials .testimonial-item h3 {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 400;
   margin: 10px 0 5px 45px;
   color: #111;
 }
@@ -884,8 +892,8 @@ section {
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
+  width: 15px;
+  height: 15px;
   background-color: #fff;
   opacity: 1;
   border: 1px solid #1bac91;
@@ -1171,8 +1179,8 @@ section {
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
+  width: 15px;
+  height: 15px;
   background-color: #fff;
   opacity: 1;
   border: 1px solid #1bac91;
@@ -1459,7 +1467,7 @@ section {
 .contact .info h4 {
   padding: 0 0 0 60px;
   font-size: 17px;
-  font-weight: 600;
+  font-weight: 400;
   margin-bottom: 5px;
   color: #21413c;
 }
