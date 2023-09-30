@@ -382,6 +382,12 @@ h6 {
 # Hero Section
 --------------------------------------------------------------*/
 
+h2 .lies {
+  display: inline-block;
+  text-decoration-line: #f1c645 underline;
+  -webkit-text-decoration-line: underline;
+}
+
 #hero {
   width: 100%;
   height: calc(100vh - 70px);
@@ -429,7 +435,7 @@ h6 {
   font-family: 'Sacramento', cursive;
   margin: 0 0 0 0;
   font-size: 90px;
-  font-weight: 500;
+  font-weight: 300;
   line-height: 120px;
   color: #1bac91;
 }
@@ -439,7 +445,6 @@ h6 {
   margin-bottom: 35px;
   font-size: 24px;
   font-weight: 700;
-  display: inline-block;
 }
 
 #hero .btn-get-started {
@@ -487,10 +492,9 @@ h6 {
     line-height: 40px;
     margin-top: 40px;
     font-weight: 500;
-    display: inline-block;
   }
 
-    #hero h2 .lies {
+  #hero h2 .lies {
     display: inline-block;
   }
 
