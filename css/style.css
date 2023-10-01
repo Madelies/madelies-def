@@ -449,10 +449,9 @@ h6 {
 }
 
 #hero .btn-get-started {
-  font-family: "dosis", sans-serif;
   text-transform: uppercase;
   font-weight: 300;
-  font-size: 18px;
+  font-size: 16px;
   letter-spacing: 1px;
   display: inline-block;
   padding: 8px 28px;
@@ -656,6 +655,36 @@ section {
     color: #5a5858;
   }
 }
+
+  .about .btn-mijn-verhaal {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 8px 28px;
+    margin-top: 20px;
+    border-radius: 15px;
+    transition: 0.5s;
+    border: 2px solid #1bac91;
+    color: #1bac91;
+  }
+
+  #about .btn-mijn-verhaal {
+    border: 2px solid #1bac91;
+    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
+    display: inline-block;
+    margin-left: 60px;
+    
+  }
+
+
+  #about .btn-mijn-verhaal:hover {
+    border-color: #f1c645;
+    border-style: dashed solid;
+  }
 
 /*--------------------------------------------------------------
 # Steps
@@ -1139,6 +1168,7 @@ section {
 .item .item-wrap>.work-info h3 {
   font-size: 20px;
   margin-bottom: 0;
+  color: white;
 }
 
 .item .item-wrap>.work-info span {
@@ -1434,7 +1464,7 @@ section {
 .blog p {
     font-size: 15px;
     color: rgb(90, 88, 88);
-
+    margin-bottom: 40px;
 }
 
 .blog .image {
@@ -1468,8 +1498,8 @@ section {
 }
 
 
-.blog {
-    padding: 0;
+#blog {
+    padding: 12px;
 }
 
 .well {
@@ -1480,27 +1510,55 @@ section {
     border-radius: 3px;
     position: relative;
     max-height: 100000px;
+    margin-bottom: 30px;
 }
 
 .blog .blog-details h2 {
     margin-bottom: 10px;
+    margin-top: 30px;
     padding-bottom: 10px;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 300;
     color: #1bac91;
-
 }
 
 .blog .date .blog-number {
     color: #1bac91;
     display: block;
     font-size: 24px;
-    text-align: center;
-}                    
+} 
+
+.blog-details .btn-blog-detail {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 8px 28px;
+  border-radius: 15px;
+  transition: 0.5s;
+  border: 2px solid #1bac91;
+  color: #1bac91;
+}
+
+.blog-details .btn-blog-detail:hover {
+  border-color: #f1c645;
+  border-style: dashed solid;
+}
 
 @media (max-width: 570px) {
   .blog .blog-details {
     margin-top: 20px;
+  }
+}
+@media only screen and (min-width: 1025px) {
+#blog .image .image-mobile {
+  display: none !important;
+}
+}
+
+@media only screen and (max-width: 1026px) {
+  #blog .image .image-pc {
+    display: none !important;
   }
 }
 
