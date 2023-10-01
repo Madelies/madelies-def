@@ -1470,7 +1470,8 @@ section {
 .blog .image {
     overflow: hidden;
     border-radius: 3px 0 0 3px;
-    height: 250px;
+    height: 290px;
+    object-fit: contain;
 }
 
 .blog .image img {
@@ -1510,7 +1511,7 @@ section {
     border-radius: 3px;
     position: relative;
     max-height: 100000px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 .blog .blog-details h2 {
@@ -1550,13 +1551,13 @@ section {
     margin-top: 20px;
   }
 }
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 920px) {
 #blog .image .image-mobile {
   display: none !important;
 }
 }
 
-@media only screen and (max-width: 1026px) {
+@media only screen and (max-width: 919px) {
   #blog .image .image-pc {
     display: none !important;
   }
