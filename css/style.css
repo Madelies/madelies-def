@@ -1502,6 +1502,7 @@ section {
 
 .blog .blog-details {
     padding: 20 40px 0 0;
+    display: block;
 }
 
 
@@ -1568,6 +1569,38 @@ section {
     display: none !important;
   }
 }
+
+
+/*--------------------------------------------------------------
+# blog description
+--------------------------------------------------------------*/
+
+#blog-zoom {
+  padding-top: 40px;
+
+}
+
+.blog-zoom .blog-description {
+ display: inline-block;
+}
+
+.blog-zoom h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.blog-zoom .blog-description img {
+ margin-bottom: 30px;
+}
+
+.blog-zoom .blog-description p {
+  padding: 0;
+  
+}
+
+
+
 
 /*--------------------------------------------------------------
 # streepjes
