@@ -1480,8 +1480,8 @@ section {
 }
 
 @media (max-width: 750px) {
-  .blog .image img {
-    max-height: 100%;
+  .blog .image {
+    max-height: 250px;
   }
 }
 
