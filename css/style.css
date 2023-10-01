@@ -1479,6 +1479,12 @@ section {
     height: auto;
 }
 
+@media (max-width: 750px) {
+  .blog .image img {
+    max-height: 100%;
+  }
+}
+
 .blog .date {
   top: -10px;
   z-index: 99;
