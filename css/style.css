@@ -1460,16 +1460,16 @@ section {
 # blog
 --------------------------------------------------------------*/
 
-#blog .card {
+.blogg .card {
  margin-left: 10px;
  border: 3px #e7f6f4 dashed;
 }
 
-#blog .card-body {
+.blogg .card-body {
   color: #21413c;
 }
 
-#blog .card-body:hover {
+.blogg .card-body:hover {
   color: #1bac91
 }
 
