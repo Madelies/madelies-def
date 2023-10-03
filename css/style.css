@@ -1461,7 +1461,7 @@ section {
 --------------------------------------------------------------*/
 
 .blogg .card {
- margin-left: 10px;
+ margin: 20px;
  border: 3px #e7f6f4 dashed;
 }
 
