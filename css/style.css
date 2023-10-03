@@ -739,7 +739,7 @@ section {
 
 /*--------------------------------------------------------------
 # Features
---------------------------------------------------------------*/
+--------------------------------------------------------------
 
 
 
@@ -1610,7 +1610,7 @@ section {
   color: #fff;
 }
 
-.contact .php-email-form {
+/*.contact .php-email-form {
   width: 100%;
   padding: 30px;
   background: #fff;
@@ -1688,7 +1688,7 @@ section {
 
 .contact .php-email-form button[type=submit]:hover {
   background: #22d8b6;
-}
+} */
 
 @keyframes animate-loading {
   0% {
@@ -1835,7 +1835,7 @@ section {
   color: #34dfbf;
 }
 
-#footer .footer-top .footer-newsletter form {
+/*#footer .footer-top .footer-newsletter form {
   margin-top: 30px;
   background: #fff;
   padding: 6px 10px;
@@ -1866,7 +1866,7 @@ section {
 
 #footer .footer-top .footer-newsletter form input[type=submit]:hover {
   background: #1bac91;
-}
+} */
 
 #footer .copyright {
   padding-top: 0px;
