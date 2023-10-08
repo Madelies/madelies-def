@@ -417,15 +417,15 @@ h6 {
   
 } */
 
-#hero:before {
+/*#hero:before {
   content: "";
   position: absolute;
-  /*background: rgba(0, 0, 0, 0.4);*/
+  background: rgba(0, 0, 0, 0.4);
   bottom: 0;
   top: 0;
   left: 0;
   right: 0;
-}
+} */
 
 #hero .container {
   z-index: 2;
@@ -435,7 +435,6 @@ h6 {
   font-family: 'Sacramento', cursive;
   margin: 0 0 0 0;
   font-size: 90px;
-  font-weight: 100;
   line-height: 120px;
   color: #1bac91;
 }
@@ -457,6 +456,8 @@ h6 {
   transition: 0.5s;
   border: 2px solid #1bac91;
   color: #1bac91;
+  border: 1px solid #1BAc91;
+  margin-top: 20px;
 }
 
 #hero .btn-get-started:hover {
@@ -464,11 +465,11 @@ h6 {
   border-style: dashed solid;
 }
 
-@media (min-width: 1024px) {
+/*@media (min-width: 750px) {
   #hero {
     background-attachment: fixed;
   }
-}
+} */
 
 @media (max-width: 992px) {
   #hero {
@@ -495,14 +496,7 @@ h6 {
   #hero h2 .lies {
     display: inline-block;
   }
-
-  #hero .btn-get-started {
-    border: 1px solid #1BAc91;
-    margin-top: 20px;
-  }
-
 }
-
 
 /*--------------------------------------------------------------
 # Sections General
