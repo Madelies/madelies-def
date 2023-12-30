@@ -498,6 +498,26 @@ h6 {
   }
 }
 
+.icon-socials-hero {
+  display: inline-block;
+  padding: 8px 28px;
+  margin: 20px;
+  transition: 0.5s;
+  color: #1bac91;
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 1px;
+  border-radius: 15px;
+  border: 1px solid #1bac91;
+}
+
+#hero .btn-get-started:hover {
+  border-color: #f1c645;
+  border-style: dashed solid;
+}
+
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
