@@ -975,6 +975,13 @@ section {
   object-fit: fill;
 }
 
+.portfolio h2 {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 40px;
+  -webkit-font-smoothing: antialiased;
+  color: #5a5858;
+}
+
 
 
 .portfolio #portfolio-flters {
