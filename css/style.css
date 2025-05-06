@@ -517,6 +517,11 @@ h6 {
   border-color: #f1c645;
   border-style: dashed solid;
 }
+/*--------------------------------------------------------------
+# Webshop
+--------------------------------------------------------------*/
+
+
 
 /*--------------------------------------------------------------
 # Sections General
@@ -1224,12 +1229,29 @@ section {
   width: 100%;
 }
 
+.portfolio-details .portfolio-details-slider-cirkerie img {
+  width: 100%;
+}
+
 .portfolio-details .portfolio-details-slider .swiper-pagination {
   margin-top: 20px;
   position: relative;
 }
 
+.portfolio-details .portfolio-details-slider-cirkerie .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  opacity: 1;
+  border: 1px solid #1bac91;
+}
+
+.portfolio-details .portfolio-details-slider-cirkerie .swiper-pagination .swiper-pagination-bullet {
   width: 15px;
   height: 15px;
   background-color: #fff;
@@ -1244,7 +1266,18 @@ section {
 }
 }
 
+@media (max-width: 750px) {
+  .portfolio-details .portfolio-details-slider-cirkerie .swiper-pagination .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+}
+}
+
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #1bac91;
+}
+
+.portfolio-details .portfolio-details-slider-cirkerie .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #1bac91;
 }
 
@@ -1291,8 +1324,27 @@ section {
 }
 
 
+
+ .cirkerie-video {
+  width: 30vw;
+  display: block;
+  margin-left: 100px;
+  padding-left: 100px;
+ }
+
+
 @media (max-width: 992px) { 
   .portfolio-details .portfolio-description .friendful-video {
+   width: 50vw;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   padding-left: 0;
+}
+}
+
+@media (max-width: 992px) { 
+  .portfolio-details .cirkerie-video {
    width: 50vw;
    display: block;
    margin-left: auto;
