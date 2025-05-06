@@ -147,7 +147,7 @@
     speed: 2000,
     loop: true,
     autoplay: {
-      delay: 8000,
+      delay: 10000,
       disableOnInteraction: false
     },
     slidesPerView: 'auto',
@@ -210,12 +210,26 @@
   /**
    * Portfolio details slider
    */
+  new Swiper('.portfolio-details-slider-cirkerie', {
+    speed: 600,
+    autoplay: {
+      delay: 13500,
+      loop: true,
+      disableOnInteraction: true
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true
+    }
+  });
+
   new Swiper('.portfolio-details-slider', {
     speed: 600,
-    loop: true,
     autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
+      delay: 4000,
+      loop: true,
+      disableOnInteraction: true
     },
     pagination: {
       el: '.swiper-pagination',
