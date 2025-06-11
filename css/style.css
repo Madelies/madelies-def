@@ -629,6 +629,7 @@ section {
 
 .img-fluid-profile {
   border-radius: 50%;
+  width: 70%;
 }
 
 .about h3 {
