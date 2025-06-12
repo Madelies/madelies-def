@@ -671,6 +671,17 @@ section {
   }
 }
 
+@media (max-width: 768px) {
+  .img-fluid-profile {
+  border-radius: 50%;
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  }
+   }
+}
+
   .about .btn-mijn-verhaal {
     text-transform: uppercase;
     font-weight: 300;
@@ -715,6 +726,13 @@ section {
   clear: both;
   display: table;
 }
+
+@media (max-width: 768px) {
+  .moestuin .column {
+  display: none
+}
+}
+
 
 /*--------------------------------------------------------------
 # Steps
