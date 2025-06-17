@@ -1,11 +1,4 @@
 
-/**
-* Template Name: Maxim
-* Updated: Jul 27 2023 with Bootstrap v5.3.1
-* Template URL: https://bootstrapmade.com/maxim-free-onepage-bootstrap-theme/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 (function() {
   "use strict";
 
@@ -196,6 +189,19 @@
           AOS.refresh()
         });
       }, true);
+      
+      // Zorg ervoor dat portfolio-links correct werken
+      let portfolioLinks = select('.portfolio-wrap .bx-link', true);
+      if (portfolioLinks) {
+        portfolioLinks.forEach(function(link) {
+          link.addEventListener('click', function(e) {
+            const parentLink = this.closest('a');
+            if (parentLink && parentLink.getAttribute('href')) {
+              window.location.href = parentLink.getAttribute('href');
+            }
+          });
+        });
+      }
     }
 
   });
@@ -225,9 +231,9 @@
   });
 
   new Swiper('.portfolio-details-slider', {
-    speed: 600,
+    speed: 800,
     autoplay: {
-      delay: 4000,
+      delay: 10000, // Verhoogd naar 10 seconden voor langere weergave van video's
       loop: true,
       disableOnInteraction: true
     },

@@ -1,0 +1,59 @@
+/* Portfolio Video in Swiper */
+.portfolio-details-slider .swiper-slide {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  min-height: 400px;
+  overflow: hidden;
+}
+
+.portfolio-details-slider .swiper-slide img {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto; /* Centreert de content horizontaal */
+}
+
+.video-container {
+  width: 80%; /* Verlaagd naar 80% voor meer padding */
+  margin: 0 auto; /* Centreert de container horizontaal */
+  position: relative;
+}
+
+.portfolio-video {
+  width: 100%; 
+  height: auto;
+  max-height: 80vh;
+  object-fit: contain;
+  display: block;
+  background-color: #ffffff; /* Donkere achtergrond voor video */
+  border-radius: 4px;
+}
+
+/* Extra styling voor video in portfolio */
+.portfolio-details-slider .swiper-slide video {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  background-color: #fdfdfd; 
+}
+
+/* Zorgt ervoor dat video's langer zichtbaar blijven in de Swiper */
+.swiper-slide-active video {
+  z-index: 2;
+  position: relative;
+}
+
+/* Responsive video in portfolio */
+@media (max-width: 768px) {
+  .portfolio-details-slider .swiper-slide {
+    min-height: 300px;
+  }
+  
+  .portfolio-details-slider .swiper-slide video {
+    max-height: 60vh;
+    max-width: 95%; /* Iets meer breedte op mobiel */
+  }
+}

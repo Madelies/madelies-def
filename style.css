@@ -1,0 +1,22 @@
+/*
+Theme Name: Madelies
+Theme URI: https://madelies.be
+Author: Madelies Design
+Author URI: https://madelies.be & https://devcomkempen.be
+Description: Custom WordPress theme voor Madelies Design
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: madelies
+Tags: portfolio, design, graphic-design, responsive
+*/
+
+@import url('css/style.css');
+
+.wp-caption {max-width: 100%; height: auto;}
+.wp-caption-text {font-style: italic; margin-bottom: 20px;}
+.gallery-caption {display: block;}
+.bypostauthor {font-weight: bold;}
+.alignright {float: right; margin: 0 0 20px 20px;}
+.alignleft {float: left; margin: 0 20px 20px 0;}
+.aligncenter {display: block; margin: 0 auto 20px;}

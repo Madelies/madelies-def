@@ -1,0 +1,38 @@
+/**
+ * Portfolio styling fix - Herstelt de overlay zoals het was maar verwijdert ongewenste elementen
+ */
+
+/* Herstel de donkere overlay bij hover */
+.portfolio .portfolio-wrap::before {
+  background: rgba(0, 0, 0, 0.5) !important; /* Donkere achtergrond zoals origineel */
+}
+
+.portfolio .portfolio-wrap:hover::before {
+  opacity: 1 !important; /* Volledig zichtbare overlay bij hover */
+}
+
+/* Verwijder de links-sectie volledig (de grijze balk met groene bollen) */
+.portfolio .portfolio-wrap .portfolio-links {
+  display: none !important; /* Verbergt de hele sectie met de links/bollen */
+}
+
+/* Herstel de centrering van de tekst zoals voorheen */
+.portfolio .portfolio-wrap .portfolio-info {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  padding: 0 !important;
+  height: 100% !important;
+}
+
+/* Verwijder de witte hoeken */
+.portfolio .portfolio-wrap .portfolio-info::before,
+.portfolio .portfolio-wrap .portfolio-info::after {
+  display: none !important;
+}
