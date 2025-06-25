@@ -74,3 +74,19 @@
 </body>
 
 </html>
+
+<?php if (class_exists('WooCommerce')) : ?>
+<!-- Floating Action Button voor winkelwagen -->
+<?php 
+$cart_count = WC()->cart->get_cart_contents_count();
+$show_class = $cart_count > 0 ? 'show' : '';
+?>
+<div class="cart-fab <?php echo $show_class; ?>" id="cart-fab">
+    <a href="<?php echo esc_url(wc_get_cart_url()); ?>" class="cart-fab-link">
+        <i class="bi bi-cart3"></i>
+        <span class="cart-fab-count <?php echo $cart_count > 0 ? '' : 'empty'; ?>" id="cart-fab-count">
+            <?php echo $cart_count; ?>
+        </span>
+    </a>
+</div>
+<?php endif; ?>

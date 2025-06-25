@@ -84,13 +84,13 @@ get_header();
               ),
               array(
                   'number' => '05',
-                  'title' => 'webshop',
-                  'description' => 'je wil een webshop opstarten waar je je waren verkoopt',
+                  'title' => '(logo-)animatie',
+                  'description' => 'je zoekt een originele animatie die onder andere op social media of op websites gebruikt kan worden',
               ),
               array(
                   'number' => '06',
-                  'title' => 'illustraties',
-                  'description' => 'je wil bestaande producten personaliseren met een uniek ontwerp, of je wil een gepersonaliseerd cadeau geven',
+                  'title' => '(textiel)vinylcutting',
+                  'description' => 'je wil je design laten uitsnijden uit (textiel)vinyl om t-shirts, totebags, onderzetters, koffietassen, muren en allerlei andere voorwerpen te decoreren',
               ),
           );
           $delay = 0;

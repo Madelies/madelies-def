@@ -1,4 +1,3 @@
-
 (function() {
   "use strict";
 
@@ -89,9 +88,25 @@
    * Mobile nav toggle
    */
   on('click', '.mobile-nav-toggle', function(e) {
-    select('#navbar').classList.toggle('navbar-mobile')
-    this.classList.toggle('bi-list')
-    this.classList.toggle('bi-x')
+    console.log('Mobile toggle clicked'); // Debug
+    
+    const navbar = select('#navbar');
+    const toggle = select('.mobile-nav-toggle');
+    
+    if (navbar && toggle) {
+      navbar.classList.toggle('navbar-mobile');
+      
+      // Verander icoon
+      if (navbar.classList.contains('navbar-mobile')) {
+        toggle.classList.remove('bi-list');
+        toggle.classList.add('bi-x');
+        console.log('Menu opened'); // Debug
+      } else {
+        toggle.classList.remove('bi-x');
+        toggle.classList.add('bi-list');
+        console.log('Menu closed'); // Debug
+      }
+    }
   })
 
   /**

@@ -93,6 +93,8 @@ function madelies_enqueue_scripts() {
     wp_enqueue_style('portfolio-overlay-fix', get_theme_file_uri('/css/portfolio-overlay-fix.css'), array('madelies-style', 'portfolio-custom'), '1.0.0');
     wp_enqueue_style('testimonials-custom', get_theme_file_uri('/css/testimonials-custom.css'), array('madelies-style'), '1.0.0');
     
+    // WooCommerce styling wordt geladen in wc_enqueue_custom_styles()
+    
     wp_enqueue_script('aos-js', get_theme_file_uri('/vendor/aos/aos.js'), array(), '1.0.0', true);
     wp_enqueue_script('bootstrap-js', get_theme_file_uri('/vendor/bootstrap/js/bootstrap.bundle.min.js'), array(), '5.3.1', true);
     wp_enqueue_script('glightbox-js', get_theme_file_uri('/vendor/glightbox/js/glightbox.min.js'), array(), '1.0.0', true);
@@ -633,3 +635,140 @@ function madelies_disable_comments() {
     });
 }
 add_action('init', 'madelies_disable_comments');
+
+/**
+ * WooCommerce ondersteuning toevoegen
+ */
+function madelies_woocommerce_support() {
+    add_theme_support('woocommerce');
+    add_theme_support('wc-product-gallery-zoom');
+    add_theme_support('wc-product-gallery-lightbox');
+    add_theme_support('wc-product-gallery-slider');
+}
+add_action('after_setup_theme', 'madelies_woocommerce_support');
+
+/**
+ * Enqueue Bootstrap voor WooCommerce pagina's
+ */
+function madelies_woocommerce_scripts() {
+    // Alleen laden op WooCommerce pagina's
+    if (is_woocommerce() || is_cart() || is_checkout() || is_account_page()) {
+        // Bootstrap CSS (als je het nog niet hebt geladen)
+        if (!wp_style_is('bootstrap', 'enqueued')) {
+            wp_enqueue_style('bootstrap', get_template_directory_uri() . '/vendor/bootstrap/css/bootstrap.min.css', array(), '5.1.3');
+        }
+        
+        // Onze custom WooCommerce styling
+        wp_enqueue_style('madelies-woocommerce', get_template_directory_uri() . '/css/woocommerce-custom.css', array(), '1.0.0');
+        
+        // Bootstrap JS (als je het nog niet hebt geladen)
+        if (!wp_script_is('bootstrap', 'enqueued')) {
+            wp_enqueue_script('bootstrap', get_template_directory_uri() . '/vendor/bootstrap/js/bootstrap.bundle.min.js', array('jquery'), '5.1.3', true);
+        }
+    }
+}
+add_action('wp_enqueue_scripts', 'madelies_woocommerce_scripts');
+
+/**
+ * Voeg Bootstrap classes toe aan WooCommerce elementen
+ */
+function madelies_woocommerce_bootstrap_classes() {
+    // Verwijder standaard wrappers
+    remove_action('woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
+    remove_action('woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
+    
+    // Voeg Bootstrap wrappers toe
+    add_action('woocommerce_before_main_content', 'madelies_woocommerce_wrapper_start', 10);
+    add_action('woocommerce_after_main_content', 'madelies_woocommerce_wrapper_end', 10);
+}
+add_action('after_setup_theme', 'madelies_woocommerce_bootstrap_classes');
+
+/**
+ * Bootstrap wrapper start
+ */
+function madelies_woocommerce_wrapper_start() {
+    echo '<section class="woocommerce-section">';
+    echo '<div class="container mt-5">';
+    echo '<div class="row">';
+    echo '<div class="col-md-12">';
+}
+
+/**
+ * Bootstrap wrapper end
+ */
+function madelies_woocommerce_wrapper_end() {
+    echo '</div>'; // .col-md-12
+    echo '</div>'; // .row
+    echo '</div>'; // .container
+    echo '</section>';
+}
+
+/**
+ * Voeg Bootstrap classes toe aan loops
+ */
+function madelies_woocommerce_loop_columns() {
+    return 3; // 3 producten per rij
+}
+add_filter('loop_shop_columns', 'madelies_woocommerce_loop_columns');
+
+/**
+ * Voeg Bootstrap classes toe aan product thumbnails
+ */
+function madelies_woocommerce_image_dimensions() {
+    update_option('woocommerce_thumbnail_image_width', 350);
+    update_option('woocommerce_single_image_width', 600);
+    
+    // Hard crop voor beter passende afbeeldingen
+    update_option('woocommerce_thumbnail_cropping', 'custom');
+    update_option('woocommerce_thumbnail_cropping_custom_width', 4);
+    update_option('woocommerce_thumbnail_cropping_custom_height', 3);
+}
+add_action('after_switch_theme', 'madelies_woocommerce_image_dimensions');
+
+/**
+ * Voeg Bootstrap classes toe aan buttons
+ */
+function madelies_woocommerce_loop_add_to_cart_args($args, $product) {
+    $args['class'] = $args['class'] . ' btn btn-primary';
+    return $args;
+}
+add_filter('woocommerce_loop_add_to_cart_args', 'madelies_woocommerce_loop_add_to_cart_args', 10, 2);
+
+add_filter('woocommerce_add_to_cart_fragments', 'update_cart_count_fragments');
+
+/**
+ * AJAX handler voor cart count
+ */
+function get_cart_count_ajax() {
+    if (class_exists('WooCommerce')) {
+        $count = WC()->cart->get_cart_contents_count();
+        wp_send_json_success(array('count' => $count));
+    } else {
+        wp_send_json_error('WooCommerce not active');
+    }
+}
+add_action('wp_ajax_get_cart_count', 'get_cart_count_ajax');
+add_action('wp_ajax_nopriv_get_cart_count', 'get_cart_count_ajax');
+
+/**
+ * Voeg cart FAB script toe
+ */
+function madelies_cart_fab_scripts() {
+    if (class_exists('WooCommerce')) {
+        wp_enqueue_script(
+            'madelies-cart-fab',
+            get_template_directory_uri() . '/js/cart-fab.js',
+            array('jquery'),
+            '1.0.0',
+            true
+        );
+        
+        // Voeg WooCommerce parameters toe voor AJAX
+        wp_localize_script('madelies-cart-fab', 'woocommerce_params', array(
+            'ajax_url' => admin_url('admin-ajax.php')
+        ));
+    }
+}
+add_action('wp_enqueue_scripts', 'madelies_cart_fab_scripts');
+
+// ...existing code...
