@@ -12,7 +12,7 @@
       return document.querySelector(el)
     }
   }
-
+  //Aanpassing voor Lies
   /**
    * Easy event listener function
    */
