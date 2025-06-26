@@ -34,6 +34,93 @@ h6 {
   -webkit-font-smoothing: antialiased;
   color: #5a5858;
 }
+/**
+ * Force Montserrat on entire website - CSS only
+ */
+body,
+html {
+    font-family: "Montserrat", sans-serif !important;
+}
+
+/* Override alle elementen */
+*,
+*::before,
+*::after {
+    font-family: inherit !important;
+}
+
+/* Extra zekerheid voor specifieke elementen */
+h1, h2, h3, h4, h5, h6,
+p, div, span, a, button, input, select, textarea,
+.btn, .card, .card-title, .card-text,
+.breadcrumb, .navbar, .nav-link,
+.product-title, .product-price {
+    font-family: "Montserrat", sans-serif !important;
+}
+
+/* Bootstrap overrides */
+.container, .container-fluid, .row, .col,
+[class*="col-"] {
+    font-family: "Montserrat", sans-serif !important;
+}
+/**
+ * Force Montserrat on entire website including WordPress menus
+ */
+body,
+html {
+    font-family: "Montserrat", sans-serif !important;
+}
+
+/* Override alle elementen */
+*,
+*::before,
+*::after {
+    font-family: inherit !important;
+}
+
+/* Extra zekerheid voor specifieke elementen */
+h1, h2, h3, h4, h5, h6,
+p, div, span, a, button, input, select, textarea,
+.btn, .card, .card-title, .card-text,
+.breadcrumb, .navbar, .nav-link,
+.product-title, .product-price {
+    font-family: "Montserrat", sans-serif !important;
+}
+
+/* Bootstrap overrides */
+.container, .container-fluid, .row, .col,
+[class*="col-"] {
+    font-family: "Montserrat", sans-serif !important;
+}
+
+/* WordPress Menu specifieke overrides */
+.navbar .dropdown ul,
+.navbar .dropdown ul li,
+.navbar .dropdown ul li a,
+.dropdown-menu,
+.dropdown-item,
+#navbar ul li a,
+#navbar .dropdown ul,
+#navbar .dropdown ul li,
+#navbar .dropdown ul li a,
+.menu-item,
+.menu-item a,
+.sub-menu,
+.sub-menu li,
+.sub-menu li a {
+    font-family: "Montserrat", sans-serif !important;
+}
+
+/* Voor alle mogelijke WordPress menu classes */
+.wp-nav-menu,
+.wp-nav-menu li,
+.wp-nav-menu li a,
+.wp-nav-menu .sub-menu,
+.wp-nav-menu .sub-menu li,
+.wp-nav-menu .sub-menu li a {
+    font-family: "Montserrat", sans-serif !important;
+}
+
 
 /*--------------------------------------------------------------
 # Back to top button

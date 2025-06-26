@@ -132,7 +132,7 @@ get_header();
     
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio">
-      <div class="container">
+      <div class="container-fluid">
         <div class="section-title" data-aos="fade-up">
           <h2><?php echo get_theme_mod('portfolio_title', 'oogst uit mijn moestuin'); ?></h2>
           <p><?php echo get_theme_mod('portfolio_subtitle', 'bekijk een selectie van mijn projecten'); ?></p>

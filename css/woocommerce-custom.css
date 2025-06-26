@@ -15,6 +15,57 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+/**
+ * Font fixes voor WooCommerce pagina's - Montserrat
+ */
+
+/* Force Montserrat lettertype op alle WooCommerce elementen */
+.woocommerce,
+.woocommerce-page,
+.woocommerce *,
+.woocommerce-page *,
+body.woocommerce,
+body.woocommerce-page {
+    font-family: "Montserrat", sans-serif !important;
+}
+
+/* Specifiek voor product elementen */
+.woocommerce .product-title,
+.woocommerce h1, .woocommerce h2, .woocommerce h3, 
+.woocommerce h4, .woocommerce h5, .woocommerce h6,
+.woocommerce .price,
+.woocommerce .amount,
+.woocommerce .woocommerce-Price-amount,
+.woocommerce p,
+.woocommerce div,
+.woocommerce span,
+.woocommerce a,
+.woocommerce button,
+.woocommerce input,
+.woocommerce select,
+.woocommerce textarea {
+    font-family: "Montserrat", sans-serif !important;
+}
+
+/* Bootstrap elementen in WooCommerce */
+.woocommerce .card-title,
+.woocommerce .card-text,
+.woocommerce .btn,
+.woocommerce .breadcrumb,
+.card-title,
+.card-text,
+.btn {
+    font-family: "Montserrat", sans-serif !important;
+}
+
+/* Zorg ervoor dat custom classes ook Montserrat gebruiken */
+.product-title,
+.product-price,
+.shop-header h1,
+.shop-description {
+    font-family: "Montserrat", sans-serif !important;
+}
+
 
 .woocommerce-section {
     padding: 60px 0;
