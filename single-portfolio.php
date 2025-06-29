@@ -24,6 +24,7 @@ get_header();
           $gallery_images = array();
           
           // Als ACF is geïnstalleerd en een galerij-veld bestaat
+          /*
           if (function_exists('get_field') && get_field('portfolio_gallery')) {
             $gallery = get_field('portfolio_gallery');
             if (!empty($gallery)) {
@@ -36,7 +37,7 @@ get_header();
               }
             }
           }
-          
+          */
           // Als er geen ACF galerij is, probeer dan de media-bijlagen te gebruiken
           if (empty($gallery_images)) {
             $args = array(
@@ -60,6 +61,7 @@ get_header();
           }
           
           // Voeg uitgelichte afbeelding toe aan het begin van de galerij
+          /*
           if (has_post_thumbnail()) {
             array_unshift($gallery_images, array(
               'url' => get_the_post_thumbnail_url(get_the_ID(), 'full'),
@@ -67,7 +69,7 @@ get_header();
               'type' => 'image'
             ));
           }
-          
+          */
           // Controleer of er een video URL is en voeg deze toe aan de galerij
           $video_url = '';
           if (function_exists('get_field') && get_field('portfolio_video')) {
